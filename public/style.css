@@ -1,0 +1,35 @@
+.output {
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 60px auto;
+}
+
+.body {
+  font-size: 20px;
+  margin: 0;
+}
+
+.root {
+  height: 50px;
+  width: 100%;
+  background-color: bisque;
+}
+
+.user-name {
+  padding-left: 12px;
+}
+
+.find-input {
+  width: 30%;
+  margin-left: 140px;
+  height: inherit;
+  border-radius: 3px;
+  border: none;
+  font-size: 1.25em;
+}
+
+.find-form {
+  height: 40px;
+}
