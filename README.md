@@ -1,3 +1,12 @@
+# This is the website 
+
+The website you can use to find basic information about github's user (if you know the login).
+
+The website was created using React. 
+You can find information from standard React README below:
+
+---------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
