@@ -1,6 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 .body {
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 20px;
   margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 4px 0;
+  display: flex;
+  height: inherit;
+  box-sizing: border-box;
 }
 
 .output {
@@ -11,8 +24,8 @@
   margin: 60px auto;
 }
 
-.root {
-  height: 50px;
+.header {
+  height: 44px;
   width: 100%;
   background-color: bisque;
 }
@@ -21,15 +34,44 @@
   padding-left: 12px;
 }
 
-.find-input {
-  width: 30%;
-  margin-left: 140px;
-  height: inherit;
+.header__search-input {
+  width: 40%;
+  height: 36px;
+  padding: 0 4px;
   border-radius: 3px;
   border: none;
-  font-size: 1.25em;
+  font-size: 1.25rem;
+  flex-grow: 1;
 }
 
-.find-form {
-  height: 40px;
+.header__search-form {
+  height: 36px;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.header__search-text {
+  margin: 0 0 0 auto;
+  height: 26px;
+  align-self: center;
+}
+
+.header__search-submit {
+  border: 2px solid white;
+  border-radius: 3px;
+  height: 36px;
+  font-size: 1.25rem;
+  margin-left: 4px;
+  width: 10%;
+  background-color: bisque;
+}
+
+.header__search-submit:hover,
+.header__search-submit:focus {
+  background-color: white;
+}
+
+.header__search-submit:active {
+  color: white;
+  background-color: bisque;
 }

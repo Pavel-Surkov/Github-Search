@@ -13,16 +13,19 @@ async function query(login) {
 
 function SearchForm(props) {
   return (
-    <form className="find-form" onSubmit={props.submit}>
-      <input 
-        placeholder="Type login"
-        type="text" 
-        className="find-input" 
-        name="github user" 
-        onChange={props.change} 
-      />
-      <input type="submit" />
-    </form>
+    <div className="wrapper">
+      <form className="header__search-form" onSubmit={props.submit}>
+        <input 
+          placeholder="Type login"
+          type="text" 
+          className="header__search-input" 
+          name="github user" 
+          onChange={props.change} 
+        />
+        <input className="header__search-submit" type="submit" value="Search"/>
+      </form>
+      <p className="header__search-text">Github search</p>
+    </div>
   );
 }
 
@@ -84,7 +87,7 @@ class Search extends React.Component {
   render() {
     return (
       <div className="search">
-        <div className="root">
+        <div className="header">
           <SearchForm submit={this.handleGetImage} change={this.handleChange} />
         </div>
         <div className="output">
