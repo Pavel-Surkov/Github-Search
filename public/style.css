@@ -1,14 +1,14 @@
-.output {
-  width: 100%;
-  max-width: 350px;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 60px auto;
-}
-
 .body {
   font-size: 20px;
   margin: 0;
+}
+
+.output {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 60px auto;
 }
 
 .root {

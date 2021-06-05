@@ -11,7 +11,7 @@ async function query(login) {
   return user;
 }
 
-function Find(props) {
+function SearchForm(props) {
   return (
     <form className="find-form" onSubmit={props.submit}>
       <input 
@@ -28,11 +28,11 @@ function Find(props) {
 
 function UserImage(props) {
   return (
-    <img src={props.src} style={{width: 350 + 'px'}} alt="User's avatar"></img>    
+    <img src={props.src} style={{width: 300 + 'px'}} alt="User's avatar"></img>    
   );
 }
 
-function Name(props) {
+function UserName(props) {
   return (
     <p className="name">{props.name}</p>
   );
@@ -85,11 +85,11 @@ class Search extends React.Component {
     return (
       <div className="search">
         <div className="root">
-          <Find submit={this.handleGetImage} change={this.handleChange} />
+          <SearchForm submit={this.handleGetImage} change={this.handleChange} />
         </div>
         <div className="output">
           <UserImage src={this.state.avatar} />
-          <Name className="user-name" name={this.state.name}/>
+          <UserName className="user-name" name={this.state.name}/>
           <p className="following">{this.state.following}</p>
           <p className="followers">{this.state.followers}</p>
           <p className="create-date">{this.state.created}</p>
@@ -100,4 +100,4 @@ class Search extends React.Component {
   }
 }
 
-ReactDOM.render(<Search />, document.querySelector('#searchBlock'));
+ReactDOM.render(<Search />, document.getElementById('searchBlock'));
