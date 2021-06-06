@@ -4,17 +4,14 @@
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 20px;
   margin: 0;
-}
-
-a {
-  text-decoration: none;
+  background-color: whitesmoke;
 }
 
 .wrapper {
   width: 100%;
   max-width: 940px;
   margin: 0 auto;
-  padding: 4px 0;
+  padding: 6px 0;
   display: flex;
   height: inherit;
   box-sizing: border-box;
@@ -22,15 +19,24 @@ a {
 
 .output {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-  padding: 6px;
+  padding: 8px;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   border-radius: 5px;
-  margin: 60px auto;
+  margin: 50px auto;
+}
+
+.output-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.output-value {
+  margin-left: 6px;
+  color: black;
 }
 
 .header {
-  height: 44px;
+  height: 48px;
   width: 100%;
   background-color: bisque;
 }
@@ -79,4 +85,24 @@ a {
 .header__search-submit:active {
   color: white;
   background-color: bisque;
+}
+
+.profile-button {
+  
+  background-color: #0FBC42;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 60%;
+  font-size: 0.8em;
+  height: 34px;
+}
+
+.profile-button:hover,
+.profile-button:focus {
+  background-color: #0D9936;
+}
+
+.profile-button:active {
+  color: rgba(256, 256, 256, 0.6);
 }

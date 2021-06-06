@@ -33,13 +33,58 @@ function SearchForm(props) {
 
 function UserImage(props) {
   return (
-    <img src={props.src} style={{width: 300 + 'px'}} alt="User's avatar"></img>    
+    <img src={props.src} style={{width: 320 + 'px'}} alt="User's avatar"></img>    
   );
 }
 
-function UserName(props) {
+function ProfileButton(props) {
   return (
-    <p className="name">Name: {props.name}</p>
+    <a className="profile-url" href={props.profileLink}>
+      <button className="profile-button">View Github profile</button>
+    </a>
+  );
+}
+
+function FollowingFollowers(props) {
+  return (
+    <div>
+      <p className="output-text">Followers: 
+        <span className="output-value">{props.following}</span>
+      </p>
+      <p className="output-text">Following: 
+        <span className="output-value">{props.followers}</span>
+      </p>
+    </div>
+  );
+}
+
+function DateTimeRegistration(props) {
+  return (
+    <div>
+      <p className="output-text">Date of registration: 
+        <span className="output-value">{props.creatingDate}</span>
+      </p>
+      <p className="output-text">Time of registration: 
+        <span className="output-value">{props.creatingTime}</span>
+      </p>
+    </div>
+  );
+}
+
+function Output(props) {
+  return (
+    <div className="output">
+      <UserImage src={props.avatar} />
+      <p className="output-text">Name: 
+        <span className="output-value">{props.name}</span>
+      </p>
+      <FollowingFollowers followers={props.followers} following={props.following}/>
+      <DateTimeRegistration creatingDate={props.creatingDate} creatingTime={props.creatingTime} />
+      <p className="output-text">Location: 
+        <span className="output-value">{props.location}</span>
+      </p>
+      <ProfileButton profileLink={props.profileLink}/>
+    </div> 
   );
 }
 
@@ -101,16 +146,17 @@ class Search extends React.Component {
         <div className="header">
           <SearchForm submit={this.handleGetImage} change={this.handleChange} />
         </div>
-        <div className="output">
-          <UserImage src={this.state.avatar} />
-          <UserName className="user-name" name={this.state.name}/>
-          <p className="following">Followers: {this.state.following}</p>
-          <p className="followers">Following: {this.state.followers}</p>
-          <p className="create-date">Date of registration: {creatingDate}</p>
-          <p className="create-time">Time of registration: {creatingTime}</p>
-          <p className="location">{this.state.location}</p>
-          <a className="profile-url" href={profileLink}>Github profile</a>
-        </div>  
+        <Output 
+          avatar={this.state.avatar} 
+          name={this.state.name} 
+          following={this.state.following} 
+          followers={this.state.followers} 
+          location={this.state.location} 
+          profileLink={profileLink} 
+          creatingDate={creatingDate} 
+          creatingTime={creatingTime} 
+          profileLink={profileLink}
+        />
       </div>
     );
   }
