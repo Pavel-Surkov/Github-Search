@@ -11,6 +11,8 @@ async function query(login) {
   return user;
 }
 
+console.log(query());
+
 function SearchForm(props) {
   return (
     <div className="wrapper">
@@ -37,7 +39,7 @@ function UserImage(props) {
 
 function UserName(props) {
   return (
-    <p className="name">{props.name}</p>
+    <p className="name">Name: {props.name}</p>
   );
 }
 
@@ -51,7 +53,7 @@ class Search extends React.Component {
       followers: '0',
       name: 'Pavel Surkov',
       location: 'Novosibirsk',
-      userLogin: '',
+      userLogin: 'Pavel-Surkov',
     };
   }
 
@@ -85,6 +87,15 @@ class Search extends React.Component {
   }
 
   render() {
+    const dateArr = this.state.created.split('');
+    const [
+      creatingDate, 
+      creatingTime
+    ] = [
+      dateArr.slice(0, 10).join('').split('-').reverse().join('-'),
+      dateArr.slice(11, -1).join('')
+    ];
+    const profileLink = `https://github.com/${this.state.userLogin}`;
     return (
       <div className="search">
         <div className="header">
@@ -93,10 +104,12 @@ class Search extends React.Component {
         <div className="output">
           <UserImage src={this.state.avatar} />
           <UserName className="user-name" name={this.state.name}/>
-          <p className="following">{this.state.following}</p>
-          <p className="followers">{this.state.followers}</p>
-          <p className="create-date">{this.state.created}</p>
+          <p className="following">Followers: {this.state.following}</p>
+          <p className="followers">Following: {this.state.followers}</p>
+          <p className="create-date">Date of registration: {creatingDate}</p>
+          <p className="create-time">Time of registration: {creatingTime}</p>
           <p className="location">{this.state.location}</p>
+          <a className="profile-url" href={profileLink}>Github profile</a>
         </div>  
       </div>
     );
