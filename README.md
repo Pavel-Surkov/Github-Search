@@ -5,6 +5,12 @@ The website you can use to find basic information about github's user (if you kn
 The website was created using React. 
 You can find information from standard React README below:
 
+
+### If you want to run it:
+1. Clone it into your PC
+2. Go to the folder "github-search"
+3. Run "npm start" in terminal
+
 ---------------------------------------------------------------------------------------------------
 
 # Getting Started with Create React App
