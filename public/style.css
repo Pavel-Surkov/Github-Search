@@ -26,8 +26,14 @@
   margin: 50px auto;
 }
 
-.output-text {
+.output-item {
   color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+
+.output-list {
+  list-style: none;
+  padding-left: 0;
 }
 
 .output-value {
