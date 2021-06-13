@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 async function query(login) {
   const response = await fetch(`https://api.github.com/users/${login}`);
   let user;
